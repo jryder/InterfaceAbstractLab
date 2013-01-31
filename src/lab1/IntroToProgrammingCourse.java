@@ -14,11 +14,16 @@ public class IntroToProgrammingCourse {
     private String courseNumber;
     private double credits;
 
+    
+    //constructor
     public IntroToProgrammingCourse(String courseName, String courseNumber) {
         this.setCourseName(courseName);
         this.setCourseNumber(courseNumber);
     }
 
+    
+    
+    //course number
     public String getCourseNumber() {
         return courseNumber;
     }
@@ -32,10 +37,12 @@ public class IntroToProgrammingCourse {
         this.courseNumber = courseNumber;
     }
 
+    
+    
+    //credits
     public double getCredits() {
         return credits;
     }
-
     public void setCredits(double credits) {
         if(credits < 0.5 || credits > 4.0) {
             JOptionPane.showMessageDialog(null,
@@ -45,6 +52,8 @@ public class IntroToProgrammingCourse {
         this.credits = credits;
     }
 
+    
+    //coursename
     public String getCourseName() {
         return courseName;
     }
