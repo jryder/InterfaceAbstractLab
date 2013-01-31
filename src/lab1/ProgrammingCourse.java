@@ -4,16 +4,24 @@
  */
 package lab1;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author jryder
  */
 public abstract class ProgrammingCourse {
-    private String courseName;
-    private String courseNumber;
-    private double credits;
-    private String prerequisites;
+    protected String courseName;
+    protected String courseNumber;
+    protected double credits;
     
+ 
+//constructor
+    public abstract void ProgrammingCourse(String courseName, String courseNumber) ;
     
-    
+   
+    public abstract void setCourseName(String courseName);
+    public abstract void setCourseNumber(String courseName);
+
+
 }
