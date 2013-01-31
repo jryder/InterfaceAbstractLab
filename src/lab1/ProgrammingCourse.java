@@ -15,14 +15,13 @@ public abstract class ProgrammingCourse {
     protected String courseName;
     protected String courseNumber;
     protected double credits;
+    protected String prerequisites;
     
  
-    //constructor
-    public abstract void ProgrammingCourse(String courseName, String courseNumber) ;
-    
     //allow the subclass to choose validation method
     public abstract void setCourseName(String courseName);
     public abstract void setCourseNumber(String courseName);
+    public abstract void setPrerequisites(String prerequisites);
     
     //programming courses always need to be between 0.5 and 4 credits
     public void setCredits(double credits) {
@@ -45,4 +44,15 @@ public abstract class ProgrammingCourse {
     public final String getCourseNumber() {
         return courseNumber;
     }
+    public String getCapitalizedCourseName() {
+        return this.getCourseName().toUpperCase();
+    }   
+    
+      //prereqs
+    public String getPrerequisites() {
+        return prerequisites;
+    }  
+    
+    
+    
 }

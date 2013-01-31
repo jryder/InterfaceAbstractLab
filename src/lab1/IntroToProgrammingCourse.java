@@ -12,8 +12,7 @@ import javax.swing.JOptionPane;
 public class IntroToProgrammingCourse extends ProgrammingCourse{
     
     //allow the constructor to use the specific courseNumber and courseName validation rules in the specific course 
-    @Override
-    public void ProgrammingCourse(String courseName, String courseNumber) {
+    public IntroToProgrammingCourse(String courseName, String courseNumber) {
         this.setCourseName(courseName);
         this.setCourseNumber(courseNumber);
     }
@@ -37,5 +36,13 @@ public class IntroToProgrammingCourse extends ProgrammingCourse{
         }
         this.courseName = courseName;
     }
-    
+    @Override    
+    public void setPrerequisites(String prerequisites) {
+        if(prerequisites == null || prerequisites.length() == 0) {
+            JOptionPane.showMessageDialog(null,
+                    "Error: prerequisites cannot be null of empty string");
+            System.exit(0);
+        }
+        this.prerequisites = prerequisites;
+    }    
 }

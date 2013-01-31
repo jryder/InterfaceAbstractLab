@@ -9,27 +9,35 @@ import javax.swing.JOptionPane;
  * @version     1.00
  */
 public class AdvancedJavaCourse extends ProgrammingCourse {
-    
-    //course name
-    public String getCapitalizedCourseName() {
-        return this.getCourseName().toUpperCase();
+
+    //allow the constructor to use the specific courseNumber and courseName validation rules in the specific course 
+    public AdvancedJavaCourse(String courseName, String courseNumber) {
+        this.setCourseName(courseName);
+        this.setCourseNumber(courseNumber);
     }
     
-     public void setCourseName(String courseName) {
+    
+     @Override
+    public final void setCourseNumber(String courseNumber) {
+        if(courseNumber == null || courseNumber.length() == 0) {
+            JOptionPane.showMessageDialog(null,
+                    "Error: courseNumber cannot be null of empty string");
+            System.exit(0);
+        }
+        this.courseNumber = courseNumber;
+    }
+    
+    @Override
+    public final void setCourseName(String courseName) {
+        if(courseName == null || courseName.length() == 0) {
+            JOptionPane.showMessageDialog(null,
+                    "Error: courseName cannot be null of empty string");
+            System.exit(0);
+        }
         this.courseName = courseName;
     }
- 
-    
-    
-    public void setCourseNumber(String courseNumber) {
-        this.courseNumber = courseNumber;
-    }   
      
-     //prereqs
-    public String getPrerequisites() {
-        return prerequisites;
-    }
-       
+    @Override    
     public void setPrerequisites(String prerequisites) {
         if(prerequisites == null || prerequisites.length() == 0) {
             JOptionPane.showMessageDialog(null,
