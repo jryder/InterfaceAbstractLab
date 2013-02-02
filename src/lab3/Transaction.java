@@ -1,0 +1,10 @@
+
+package lab3;
+
+/**
+ *
+ * @author Jordan Ryder
+ */
+public class Transaction {
+    
+}
