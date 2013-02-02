@@ -25,20 +25,24 @@ public class StartUp {
 	
 	
 	//add some products
-	Product[] p = new Product[100];
-	p[1].setDescription("Mop");
-	p[1].setQuantity(5);
-	p[1].setUnitCost(30.00);
-	p[1].setUnitSell(40.00);
+	Product[] p = new Product[2];
+	
+	p[0] = new Product();
+	p[0].setDescription("Mop");
+	p[0].setQuantity(5);
+	p[0].setUnitCost(30.00);
+	p[0].setUnitSell(40.00);
 	
 	//add some products
-	p[2].setDescription("Broom");
-	p[2].setQuantity(10);
-	p[2].setUnitCost(5.00);
-	p[2].setUnitSell(10.00);	
+	p[1] = new Product();
+	p[1].setDescription("Broom");
+	p[1].setQuantity(10);
+	p[1].setUnitCost(5.00);
+	p[1].setUnitSell(10.00);	
 	
         
-	
+	System.out.println("Order " + orderE.getOrderNumber()  + "was placed");
+	System.out.println("The order originated from " + );
 	
 	
 	

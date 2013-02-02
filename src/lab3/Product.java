@@ -16,7 +16,9 @@ public class Product {
     private int quantity;
     private double unitCost;
     private double unitSell;
-
+    private String description;
+    
+    
     public int getQuantity() {
 	return quantity;
     }
@@ -48,5 +50,5 @@ public class Product {
     public void setDescription(String description) {
 	this.description = description;
     }
-    private String description;
+
 }
