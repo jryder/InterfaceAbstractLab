@@ -2,7 +2,7 @@
  * I personally like the abstract class structure.  I think there is value in 
  * having reusable code, especially when there is only a few levels of superclasses.
  * 
- * One thing that I can see could be an issue with this strucutre, is that it is 
+ * One thing that I can see could be an issue with this structure, is that it is 
  * very easy to start second guessing whether or not the superclass methods should
  * be able to be overwritten.  Once they are in production it would be much more 
  * difficult to start changing things, so this has to be well planned.  
@@ -18,6 +18,10 @@
  * without negatively impacting the program.  In other words, it would be possible 
  * to replace the object types without breaking the program.  I have to do more 
  * testing in order to find when this would be utilized.  
+ * 
+ * I could have had more of the methods at the super class level, but thought to 
+ * leave this with some flexibility.  Generally though, I would think that the same 
+ * methods could be used for validation within the programming type course scope.
  * 
  */
 package lab1;
