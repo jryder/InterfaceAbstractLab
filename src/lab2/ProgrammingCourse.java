@@ -1,11 +1,13 @@
 package lab2;
 
-import javax.swing.JOptionPane;
-
-
 /**
  *
  * @author Jordan Ryder
+ * 
+ * Same as the abstract lab, all of the courses could potentially have prerequisites.
+ * However, for the sake of testing and learning, the prerequisite method is not part
+ * of the interface.
+ * 
  */
 public interface ProgrammingCourse  {
  
@@ -24,7 +26,5 @@ public interface ProgrammingCourse  {
     
     //prereqs
     public String getPrerequisites() ;
-    
-    
-    
+
 }
