@@ -14,7 +14,39 @@ public class Product {
     
     //these are pretty straightforward, all attributes of products.  These will be specific to every order
     private int quantity;
-    private float unitCost;
-    private float unitSell;
+    private double unitCost;
+    private double unitSell;
+
+    public int getQuantity() {
+	return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+	this.quantity = quantity;
+    }
+
+    public double getUnitCost() {
+	return unitCost;
+    }
+
+    public void setUnitCost(double unitCost) {
+	this.unitCost = unitCost;
+    }
+
+    public double getUnitSell() {
+	return unitSell;
+    }
+
+    public void setUnitSell(double unitSell) {
+	this.unitSell = unitSell;
+    }
+
+    public String getDescription() {
+	return description;
+    }
+
+    public void setDescription(String description) {
+	this.description = description;
+    }
     private String description;
 }

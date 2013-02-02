@@ -9,10 +9,21 @@ package lab3;
  * 
  */
 public abstract class Order extends Transaction implements Freight {
+    int orderNumber;
     int orderingLocationID;
     int orderingContactID;
-    Product products[];
     double totalSell;
+    Product[] products;
+       
+    
+    public int getOrderNumber() {
+        return orderNumber;
+    }
+
+    public void setOrderNumber(int orderNumber) {
+        this.orderNumber = orderNumber;
+    }
+
 
     public int getOrderingLocationID() {
         return orderingLocationID;
