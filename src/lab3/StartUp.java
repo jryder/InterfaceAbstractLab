@@ -4,6 +4,16 @@ package lab3;
 /**
  *
  * @author Jordan Ryder
+ * 
+ * 
+ * The more I thought about it, I think that the ECommerceOrder and the PhoneOrder
+ * classes could just be different attributes of the main order class, but I'm not 
+ * sure.  I think that these classes may be needed because of how they would have 
+ * to tie into the rest of the transaction system.  They may have to have other 
+ * behaviors that make them unique.
+ * 
+ * 
+ * 
  */
 public class StartUp {
     
@@ -41,8 +51,8 @@ public class StartUp {
 	p[1].setUnitSell(10.00);	
 	
         
-	System.out.println("Order " + orderE.getOrderNumber()  + "was placed");
-	System.out.println("The order originated from " + );
+	System.out.println("Order " + orderE.getOrderNumber()  + " was placed");
+	System.out.println("The purchaser was redirected from " + orderE.onlineReferrer );
 	
 	
 	

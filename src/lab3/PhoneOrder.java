@@ -11,21 +11,28 @@ package lab3;
  */
 public class PhoneOrder extends Order{
 
+    //These properties are specific to the PhoneOrder class.  The orderTypeID could possibly be put on the suer class,
+    //but there may be different values or behaviors for online orders
     String phoneNotes; //any special comments taken by the account manager 
     int orderTypeID; //this would store order types such as cancellation, credit, normal
 
-    public String getPhoneNotes() {
+   
+    //no need to override
+    public final String getPhoneNotes() {
         return phoneNotes;
     }
 
+    //possibly could be overridden with validation
     public void setPhoneNotes(String phoneNotes) {
         this.phoneNotes = phoneNotes;
     }
 
-    public int getOrderTypeID() {
+    //no need to override
+    public final int getOrderTypeID() {
         return orderTypeID;
     }
 
+    
     public void setOrderTypeID(int orderTypeID) {
         this.orderTypeID = orderTypeID;
     }

@@ -19,34 +19,44 @@ public class Product {
     private String description;
     
     
-    public int getQuantity() {
+    public final int getQuantity() {
 	return quantity;
     }
 
+    //depending on the circumstance, it may be necessary to make sure there is 
+    //not a negative quantity, so allow for an override
     public void setQuantity(int quantity) {
 	this.quantity = quantity;
     }
 
-    public double getUnitCost() {
+    //should not need to be overridden
+    public final double getUnitCost() {
 	return unitCost;
     }
-
+    
+    //This may need to be overriden to prevent negative values
     public void setUnitCost(double unitCost) {
 	this.unitCost = unitCost;
     }
 
-    public double getUnitSell() {
+    //should not need to overridden
+    public final double getUnitSell() {
 	return unitSell;
     }
 
+    //could possibly be overridden to prevent negative values
     public void setUnitSell(double unitSell) {
 	this.unitSell = unitSell;
     }
 
+  
+    //does not need to be overridden
     public String getDescription() {
 	return description;
     }
 
+    
+   //could be overridden to validate string length so it doesn't fail being loaded to the database   
     public void setDescription(String description) {
 	this.description = description;
     }
