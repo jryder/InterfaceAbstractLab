@@ -9,6 +9,9 @@ package lab3;
  * 
  */
 public abstract class Order extends Transaction implements Freight {
+    
+    //these are the basic properties of an order.  I think these are placed correctly.
+    //Technically some of them could go on the subclass level, but I think this is better because in this transaction system, all orders will have products.
     int orderNumber;
     int orderingLocationID;
     int orderingContactID;
@@ -16,16 +19,18 @@ public abstract class Order extends Transaction implements Freight {
     Product[] products;
        
     
-    public int getOrderNumber() {
+    //no need to override
+    public final int getOrderNumber() {
         return orderNumber;
     }
 
+    //this could be overridden with validation
     public void setOrderNumber(int orderNumber) {
         this.orderNumber = orderNumber;
     }
 
-
-    public int getOrderingLocationID() {
+    //no need to override
+    public final int getOrderingLocationID() {
         return orderingLocationID;
     }
 
@@ -39,26 +44,30 @@ public abstract class Order extends Transaction implements Freight {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
-    public void setOrderingLocationID(int orderingLocationID) {
+    //I don't see a need to override this, the application should be passing a valid value in
+    public final void setOrderingLocationID(int orderingLocationID) {
         this.orderingLocationID = orderingLocationID;
     }
 
     //the remaining methods could have overrides.  Some of them may have things like validation, 
     //but also may not allow for an order to be placed online if it requires extra information over the phone.
     
-    
-    public int getOrderingContactID() {
+    //no need to override
+    public final int getOrderingContactID() {
         return orderingContactID;
     }
 
+    //may use validation
     public void setOrderingContactID(int orderingContactID) {
         this.orderingContactID = orderingContactID;
     }
 
-    public Product[] getProducts() {
+    //just returns the array
+    public final Product[] getProducts() {
         return products;
     }
 
+    //possibly would have validation.  In fact, there would likely be a lot more methods to modify what is in the product list
      public void setProducts(Product[] products) {
         this.products = products;
     }   
@@ -68,6 +77,7 @@ public abstract class Order extends Transaction implements Freight {
         return totalSell;
     }
 
+    //no need to override, just a number
     public final void setTotalSell(double totalSell) {
         this.totalSell = totalSell;
     }

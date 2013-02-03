@@ -10,9 +10,14 @@ package lab3;
  * 
  */
 public class ECommerceOrder extends Order {
+    
+    //these properties are specific to the ECommerceOrder class
     String onlineReferrer; //if there was a redirect from another website
     int channelID; //what online channel was used
 
+    
+    //none of these should need to be overridden, they are pretty straightforward
+    
     public String getOnlineReferrer() {
         return onlineReferrer;
     }

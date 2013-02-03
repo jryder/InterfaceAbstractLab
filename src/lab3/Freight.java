@@ -6,7 +6,8 @@ package lab3;
  * @author Jordan Ryder
  * 
  * Orders will have to implement freight.  Freight is what will define what methods
- * are being used to deliver the product to the customer.  
+ * are being used to deliver the product to the customer.  As the system expands, 
+ * there will likely be additional methods added to this interface
  * 
  */
 public interface Freight {

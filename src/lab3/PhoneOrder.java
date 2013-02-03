@@ -33,6 +33,7 @@ public class PhoneOrder extends Order{
     }
 
     
+    //this would probably need to be overridden with validation for a valid order type
     public void setOrderTypeID(int orderTypeID) {
         this.orderTypeID = orderTypeID;
     }
